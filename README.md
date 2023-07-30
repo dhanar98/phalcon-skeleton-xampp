@@ -34,3 +34,11 @@ To
 <a href="https://opencollective.com/phalcon/#contributors">
 <img src="https://opencollective.com/phalcon/tiers/sponsors.svg?avatarHeight=48&width=800" alt="sponsors">
 </a>
+
+## SYSTEM CONFIGURATION INFORMATION 
+
+```bash
+OS VERSION : WINDOWS 11
+PHP VERSION : 8.1.17
+PHALCON VERSION : 5.0.1
+```
