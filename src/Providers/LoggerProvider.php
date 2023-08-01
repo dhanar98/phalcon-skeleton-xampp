@@ -45,12 +45,12 @@ class LoggerProvider implements ServiceProviderInterface
         $di->set(
             $this->providerName,
             function () use ($loggerConfigs) {
-                $filename  = trim($loggerConfigs->get('filename'), '\\/');
+                $filename  = trim($loggerConfigs->get('filename')[$_ENV['APP_ENV']], '\\/');
                 $path      = rtrim($loggerConfigs->get('path'), '\\/') . DIRECTORY_SEPARATOR;
                 $adapter   = new Stream($path . $filename);
                 $formatter = new Line(
                     $loggerConfigs->get('format'),
-                    $loggerConfigs->get('date')
+                    'Y-m-d H:i:s'
                 );
                 $adapter->setFormatter($formatter);
 

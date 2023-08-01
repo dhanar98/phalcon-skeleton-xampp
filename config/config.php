@@ -45,10 +45,14 @@ return [
     ],
     'logger'      => [
         'path'     => root_path('var/logs/'),
-        'format'   => '%date% [%type%] %message%',
+        'format'   => '[%level%] - %date% - %message%',
         'date'     => 'D j H:i:s',
         'logLevel' => Enum::DEBUG,
-        'filename' => 'application.log',
+        'filename' => [
+            'DEV'  => 'development.log',
+            'QE'   => 'staging.log',
+            'PROD' => 'production.log'
+        ],
     ],
     // Set to false, to disable sending emails (for use in test environment)
     'useMail'     => true,
