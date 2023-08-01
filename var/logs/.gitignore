@@ -1,2 +1,5 @@
 *
 !.gitignore
+dev.log
+main.log
+qe.log
